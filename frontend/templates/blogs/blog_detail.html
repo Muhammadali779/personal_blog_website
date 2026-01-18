@@ -1,0 +1,356 @@
+{% extends "base.html" %}
+
+{% block title %}Building a REST API with Django Rest Framework - Muhammadali{% endblock %}
+{% block meta_description %}Learn how to build a production-ready REST API using Django Rest Framework with authentication, permissions, and best practices.{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+{% endblock %}
+
+{% block content %}
+<!-- Blog Header -->
+<article class="blog-detail">
+    <header class="blog-detail-header">
+        <div class="container container-narrow">
+            <div class="breadcrumbs">
+                <a href="/">Home</a>
+                <span>/</span>
+                <a href="/blogs/">Blogs</a>
+                <span>/</span>
+                <span>Current Article</span>
+            </div>
+            
+            <div class="blog-detail-meta">
+                <span class="blog-category">Django</span>
+                <span class="blog-separator">•</span>
+                <span class="blog-reading-time">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M8 4V8L11 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    5 min read
+                </span>
+            </div>
+
+            <h1 class="blog-detail-title">Building a REST API with Django Rest Framework</h1>
+
+            <div class="blog-detail-info">
+                <div class="author-info">
+                    <div class="author-avatar">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="20" cy="15" r="6" fill="currentColor"/>
+                            <path d="M10 32C10 26 14 22 20 22C26 22 30 26 30 32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="author-name">Muhammadali</div>
+                        <div class="blog-date">January 15, 2026</div>
+                    </div>
+                </div>
+
+                <div class="blog-actions">
+                    <button class="action-btn" title="Share">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M15 6.5C16.38 6.5 17.5 5.38 17.5 4C17.5 2.62 16.38 1.5 15 1.5C13.62 1.5 12.5 2.62 12.5 4C12.5 4.18 12.52 4.36 12.56 4.53L7.91 7.35C7.43 6.92 6.81 6.65 6.13 6.65C4.62 6.65 3.38 7.89 3.38 9.4C3.38 10.91 4.62 12.15 6.13 12.15C6.81 12.15 7.43 11.88 7.91 11.45L12.56 14.27C12.52 14.44 12.5 14.62 12.5 14.8C12.5 16.18 13.62 17.3 15 17.3C16.38 17.3 17.5 16.18 17.5 14.8C17.5 13.42 16.38 12.3 15 12.3C14.32 12.3 13.7 12.57 13.22 13L8.57 10.18C8.61 10.01 8.63 9.83 8.63 9.65C8.63 9.47 8.61 9.29 8.57 9.12L13.22 6.3C13.7 6.73 14.32 7 15 7V6.5Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Content -->
+    <div class="blog-detail-content">
+        <div class="container container-narrow">
+            <div class="blog-content">
+                <!-- Introduction -->
+                <p class="lead">
+                    Django Rest Framework (DRF) is a powerful toolkit for building Web APIs in Django. 
+                    In this comprehensive guide, we'll walk through creating a production-ready REST API 
+                    with proper authentication, permissions, and best practices.
+                </p>
+
+                <h2>What is Django Rest Framework?</h2>
+                <p>
+                    Django Rest Framework is a flexible and feature-rich toolkit built on top of Django 
+                    that makes it easy to build RESTful APIs. It provides serializers for converting 
+                    complex data types to Python datatypes, authentication mechanisms, viewsets, and much more.
+                </p>
+
+                <h2>Installation and Setup</h2>
+                <p>First, let's install Django Rest Framework in our project:</p>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-language">bash</span>
+                        <button class="btn-copy" data-clipboard-target="code-1">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="5" y="5" width="9" height="9" stroke="currentColor" stroke-width="1.5" rx="1"/>
+                                <path d="M3 11V3C3 2.44772 3.44772 2 4 2H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            <span>Copy</span>
+                        </button>
+                    </div>
+                    <pre><code id="code-1" class="language-bash">pip install djangorestframework
+pip install django-filter  # For filtering support
+pip install markdown       # For browsable API</code></pre>
+                </div>
+
+                <p>Add it to your <code>INSTALLED_APPS</code> in settings.py:</p>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-language">python</span>
+                        <button class="btn-copy" data-clipboard-target="code-2">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="5" y="5" width="9" height="9" stroke="currentColor" stroke-width="1.5" rx="1"/>
+                                <path d="M3 11V3C3 2.44772 3.44772 2 4 2H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            <span>Copy</span>
+                        </button>
+                    </div>
+                    <pre><code id="code-2" class="language-python">INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'rest_framework',  # Add this
+    'django_filters',  # Add this
+]</code></pre>
+                </div>
+
+                <h2>Creating Models</h2>
+                <p>
+                    Let's create a simple blog post model that we'll expose through our API:
+                </p>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-language">python</span>
+                        <button class="btn-copy" data-clipboard-target="code-3">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="5" y="5" width="9" height="9" stroke="currentColor" stroke-width="1.5" rx="1"/>
+                                <path d="M3 11V3C3 2.44772 3.44772 2 4 2H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            <span>Copy</span>
+                        </button>
+                    </div>
+                    <pre><code id="code-3" class="language-python"># models.py
+from django.db import models
+from django.contrib.auth.models import User
+
+class BlogPost(models.Model):
+    title = models.CharField(max_length=200)
+    slug = models.SlugField(unique=True)
+    content = models.TextField()
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    is_published = models.BooleanField(default=False)
+    
+    class Meta:
+        ordering = ['-created_at']
+    
+    def __str__(self):
+        return self.title</code></pre>
+                </div>
+
+                <h2>Creating Serializers</h2>
+                <p>
+                    Serializers convert complex data types like Django models into Python datatypes 
+                    that can be easily rendered into JSON, XML, or other content types:
+                </p>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-language">python</span>
+                        <button class="btn-copy" data-clipboard-target="code-4">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="5" y="5" width="9" height="9" stroke="currentColor" stroke-width="1.5" rx="1"/>
+                                <path d="M3 11V3C3 2.44772 3.44772 2 4 2H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            <span>Copy</span>
+                        </button>
+                    </div>
+                    <pre><code id="code-4" class="language-python"># serializers.py
+from rest_framework import serializers
+from .models import BlogPost
+
+class BlogPostSerializer(serializers.ModelSerializer):
+    author_name = serializers.CharField(source='author.username', read_only=True)
+    
+    class Meta:
+        model = BlogPost
+        fields = [
+            'id', 
+            'title', 
+            'slug', 
+            'content', 
+            'author', 
+            'author_name',
+            'created_at', 
+            'updated_at', 
+            'is_published'
+        ]
+        read_only_fields = ['author', 'created_at', 'updated_at']
+    
+    def validate_title(self, value):
+        if len(value) < 5:
+            raise serializers.ValidationError("Title must be at least 5 characters long")
+        return value</code></pre>
+                </div>
+
+                <h2>Creating Views (ViewSets)</h2>
+                <p>
+                    ViewSets provide CRUD operations automatically. Here's how to create a viewset 
+                    with proper permissions:
+                </p>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-language">python</span>
+                        <button class="btn-copy" data-clipboard-target="code-5">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="5" y="5" width="9" height="9" stroke="currentColor" stroke-width="1.5" rx="1"/>
+                                <path d="M3 11V3C3 2.44772 3.44772 2 4 2H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            <span>Copy</span>
+                        </button>
+                    </div>
+                    <pre><code id="code-5" class="language-python"># views.py
+from rest_framework import viewsets, permissions
+from rest_framework.decorators import action
+from rest_framework.response import Response
+from .models import BlogPost
+from .serializers import BlogPostSerializer
+
+class BlogPostViewSet(viewsets.ModelViewSet):
+    queryset = BlogPost.objects.all()
+    serializer_class = BlogPostSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    
+    def perform_create(self, serializer):
+        # Automatically set the author to the current user
+        serializer.save(author=self.request.user)
+    
+    def get_queryset(self):
+        # Non-authenticated users can only see published posts
+        queryset = BlogPost.objects.all()
+        if not self.request.user.is_authenticated:
+            queryset = queryset.filter(is_published=True)
+        return queryset
+    
+    @action(detail=False, methods=['get'])
+    def published(self, request):
+        # Custom endpoint: /api/blogposts/published/
+        posts = self.queryset.filter(is_published=True)
+        serializer = self.get_serializer(posts, many=True)
+        return Response(serializer.data)</code></pre>
+                </div>
+
+                <h2>URL Configuration</h2>
+                <p>Finally, let's configure the URLs using DRF's router:</p>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-language">python</span>
+                        <button class="btn-copy" data-clipboard-target="code-6">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="5" y="5" width="9" height="9" stroke="currentColor" stroke-width="1.5" rx="1"/>
+                                <path d="M3 11V3C3 2.44772 3.44772 2 4 2H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            <span>Copy</span>
+                        </button>
+                    </div>
+                    <pre><code id="code-6" class="language-python"># urls.py
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import BlogPostViewSet
+
+router = DefaultRouter()
+router.register(r'blogposts', BlogPostViewSet)
+
+urlpatterns = [
+    path('api/', include(router.urls)),
+]</code></pre>
+                </div>
+
+                <h2>Testing the API</h2>
+                <p>
+                    You can now test your API! Django Rest Framework provides a browsable API interface. 
+                    Navigate to <code>http://localhost:8000/api/blogposts/</code> to see it in action.
+                </p>
+
+                <div class="callout callout-info">
+                    <div class="callout-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="2"/>
+                            <path d="M10 6V10M10 14H10.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="callout-content">
+                        <strong>Pro Tip:</strong> Use tools like Postman or curl to test your API endpoints. 
+                        The browsable API is great for development but remember to disable it in production!
+                    </div>
+                </div>
+
+                <h2>Conclusion</h2>
+                <p>
+                    In this tutorial, we've covered the basics of building a REST API with Django Rest Framework. 
+                    We've learned about serializers, viewsets, permissions, and URL routing. This is just the 
+                    beginning – DRF offers many more advanced features like pagination, filtering, throttling, 
+                    and custom authentication.
+                </p>
+
+                <p>
+                    In the next article, we'll explore authentication methods, including JWT tokens, and how to 
+                    implement them in your API.
+                </p>
+
+                <!-- Tags -->
+                <div class="blog-tags">
+                    <span class="tag">Django</span>
+                    <span class="tag">REST API</span>
+                    <span class="tag">DRF</span>
+                    <span class="tag">Backend</span>
+                    <span class="tag">Python</span>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="blog-navigation">
+                <a href="/blogs/previous-article/" class="blog-nav-link blog-nav-prev">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M12 16L6 10L12 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <div>
+                        <span class="blog-nav-label">Previous Article</span>
+                        <span class="blog-nav-title">Getting Started with Django</span>
+                    </div>
+                </a>
+                <a href="/blogs/next-article/" class="blog-nav-link blog-nav-next">
+                    <div>
+                        <span class="blog-nav-label">Next Article</span>
+                        <span class="blog-nav-title">JWT Authentication in DRF</span>
+                    </div>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M8 4L14 10L8 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</article>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="/static/js/code-copy.js"></script>
+<script>
+    // Initialize syntax highlighting
+    hljs.highlightAll();
+</script>
+{% endblock %}

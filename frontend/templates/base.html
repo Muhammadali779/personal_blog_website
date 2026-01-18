@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="{% block meta_description %}Personal blog and online courses platform by Muhammadali{% endblock %}">
+    <meta name="keywords" content="{% block meta_keywords %}blog, courses, programming, django, python{% endblock %}">
+    <meta name="author" content="Muhammadali">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="{% block og_title %}Muhammadali - Blog & Courses{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Personal blog and online courses platform{% endblock %}">
+    <meta property="og:type" content="website">
+    
+    <title>{% block title %}Muhammadali - Blog & Courses{% endblock %}</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/static/images/favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/components.css">
+    <link rel="stylesheet" href="/static/css/themes.css">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <!-- Logo -->
+                <a href="/" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 12L20 16L12 20V12Z" fill="currentColor"/>
+                    </svg>
+                    <span>Muhammadali</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <ul class="nav-menu">
+                    <li><a href="/" class="nav-link {% if request.path == '/' %}active{% endif %}">Home</a></li>
+                    <li><a href="/blogs/" class="nav-link {% if '/blogs/' in request.path %}active{% endif %}">Blogs</a></li>
+                    <li><a href="/courses/" class="nav-link {% if '/courses/' in request.path %}active{% endif %}">Courses</a></li>
+                    <li><a href="/about/" class="nav-link {% if '/about/' in request.path %}active{% endif %}">About</a></li>
+                    <li><a href="/contact/" class="nav-link {% if '/contact/' in request.path %}active{% endif %}">Contact</a></li>
+                </ul>
+
+                <!-- Right Side Actions -->
+                <div class="nav-actions">
+                    <!-- Theme Toggle -->
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                        <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="2"/>
+                            <path d="M10 2V4M10 16V18M18 10H16M4 10H2M15.5 4.5L14 6M6 14L4.5 15.5M15.5 15.5L14 14M6 6L4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M17 12C14.5 13 11 12 9 9C7 6 6 2.5 7 0C3 1 0 5 0 9C0 14 4.5 18 10 18C14 18 17.5 15 19 12C18.5 12 17.5 12 17 12Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul class="mobile-nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/blogs/">Blogs</a></li>
+                <li><a href="/courses/">Courses</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- About Section -->
+                <div class="footer-section">
+                    <h3 class="footer-heading">About Me</h3>
+                    <p class="footer-text">
+                        Software Engineering student passionate about building web applications 
+                        and sharing knowledge through blogs and online courses.
+                    </p>
+                    <p class="footer-text-small">
+                        Samarkand branch of Tashkent University of Information Technologies named after Muhammad al-Khwarizmi
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/blogs/">Blogs</a></li>
+                        <li><a href="/courses/">Courses</a></li>
+                        <li><a href="/about/">About Me</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact With Me -->
+                <div class="footer-section">
+                    <h3 class="footer-heading">Connect With Me</h3>
+                    <div class="social-links">
+                        <a href="https://t.me/@Baxtiyorovich_779" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Telegram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161l-1.84 8.673c-.138.613-.5.76-1.01.474l-2.788-2.052-1.345 1.294c-.148.148-.273.273-.562.273l.2-2.84 5.181-4.681c.225-.2-.05-.312-.35-.112l-6.4 4.03-2.76-.863c-.6-.187-.612-.6.126-.889l10.8-4.16c.5-.187.938.112.774.889z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://youtube.com/@yourusername" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:your.email@gmail.com" class="social-link" aria-label="Email">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="footer-text-small" style="margin-top: 1rem;">
+                        📧 baxtiyorovich779@gmail.com
+                    </p>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Muhammadali. All rights reserved.</p>
+                <p>Made with ❤️ using Django & PostgreSQL</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/static/js/theme.js"></script>
+    <script src="/static/js/main.js"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

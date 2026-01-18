@@ -1,0 +1,253 @@
+{% extends "base.html" %}
+
+{% block title %}Blog - Muhammadali{% endblock %}
+{% block meta_description %}Technical articles, tutorials, and insights about web development, Django, Python, and more.{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <div class="page-header-content">
+            <h1 class="page-title">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M6 8H26M6 16H26M6 24H18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+                Technical Blog
+            </h1>
+            <p class="page-subtitle">
+                In-depth articles, tutorials, and thoughts on web development, backend engineering, and technology
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Blog List -->
+<section class="blog-list-section section">
+    <div class="container">
+        <!-- Search & Filter (Optional - can be added later) -->
+        <div class="blog-filters">
+            <div class="filter-group">
+                <button class="filter-btn active" data-category="all">All Posts</button>
+                <button class="filter-btn" data-category="django">Django</button>
+                <button class="filter-btn" data-category="python">Python</button>
+                <button class="filter-btn" data-category="postgresql">PostgreSQL</button>
+                <button class="filter-btn" data-category="api">API</button>
+            </div>
+        </div>
+
+        <!-- Blog Grid -->
+        <div class="blog-grid blog-grid-full">
+            <!-- Blog Post 1 -->
+            <article class="blog-card">
+                <div class="blog-card-header">
+                    <span class="blog-category">Django</span>
+                    <span class="blog-reading-time">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M8 4V8L11 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        5 min read
+                    </span>
+                </div>
+                <h3 class="blog-card-title">
+                    <a href="/blogs/building-rest-api-django/">Building a REST API with Django Rest Framework</a>
+                </h3>
+                <p class="blog-card-preview">
+                    Learn how to build a production-ready REST API using Django Rest Framework 
+                    with authentication, permissions, and best practices. We'll cover serializers, 
+                    viewsets, and custom endpoints.
+                </p>
+                <div class="blog-card-footer">
+                    <div class="blog-meta">
+                        <span class="blog-author">Muhammadali</span>
+                        <span class="blog-separator">•</span>
+                        <span class="blog-date">Jan 15, 2026</span>
+                    </div>
+                    <a href="/blogs/building-rest-api-django/" class="blog-read-more">
+                        Read More →
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog Post 2 -->
+            <article class="blog-card">
+                <div class="blog-card-header">
+                    <span class="blog-category">Python</span>
+                    <span class="blog-reading-time">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M8 4V8L11 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        8 min read
+                    </span>
+                </div>
+                <h3 class="blog-card-title">
+                    <a href="/blogs/async-programming-python/">Mastering Async Programming in Python</a>
+                </h3>
+                <p class="blog-card-preview">
+                    Deep dive into asynchronous programming with asyncio, understanding coroutines, 
+                    tasks, and building efficient async applications. Learn when and how to use async/await 
+                    patterns effectively.
+                </p>
+                <div class="blog-card-footer">
+                    <div class="blog-meta">
+                        <span class="blog-author">Muhammadali</span>
+                        <span class="blog-separator">•</span>
+                        <span class="blog-date">Jan 12, 2026</span>
+                    </div>
+                    <a href="/blogs/async-programming-python/" class="blog-read-more">
+                        Read More →
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog Post 3 -->
+            <article class="blog-card">
+                <div class="blog-card-header">
+                    <span class="blog-category">PostgreSQL</span>
+                    <span class="blog-reading-time">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M8 4V8L11 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        6 min read
+                    </span>
+                </div>
+                <h3 class="blog-card-title">
+                    <a href="/blogs/postgresql-optimization/">PostgreSQL Query Optimization Techniques</a>
+                </h3>
+                <p class="blog-card-preview">
+                    Learn essential techniques to optimize your PostgreSQL queries, understand indexes, 
+                    analyze query plans, and improve database performance for production applications.
+                </p>
+                <div class="blog-card-footer">
+                    <div class="blog-meta">
+                        <span class="blog-author">Muhammadali</span>
+                        <span class="blog-separator">•</span>
+                        <span class="blog-date">Jan 10, 2026</span>
+                    </div>
+                    <a href="/blogs/postgresql-optimization/" class="blog-read-more">
+                        Read More →
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog Post 4 -->
+            <article class="blog-card">
+                <div class="blog-card-header">
+                    <span class="blog-category">FastAPI</span>
+                    <span class="blog-reading-time">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M8 4V8L11 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        10 min read
+                    </span>
+                </div>
+                <h3 class="blog-card-title">
+                    <a href="/blogs/fastapi-async-endpoints/">Building High-Performance Async APIs with FastAPI</a>
+                </h3>
+                <p class="blog-card-preview">
+                    Discover how to build lightning-fast asynchronous APIs using FastAPI. 
+                    Learn about async database connections, background tasks, and WebSocket support.
+                </p>
+                <div class="blog-card-footer">
+                    <div class="blog-meta">
+                        <span class="blog-author">Muhammadali</span>
+                        <span class="blog-separator">•</span>
+                        <span class="blog-date">Jan 8, 2026</span>
+                    </div>
+                    <a href="/blogs/fastapi-async-endpoints/" class="blog-read-more">
+                        Read More →
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog Post 5 -->
+            <article class="blog-card">
+                <div class="blog-card-header">
+                    <span class="blog-category">Telegram Bots</span>
+                    <span class="blog-reading-time">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M8 4V8L11 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        7 min read
+                    </span>
+                </div>
+                <h3 class="blog-card-title">
+                    <a href="/blogs/aiogram-bot-development/">Creating Advanced Telegram Bots with Aiogram</a>
+                </h3>
+                <p class="blog-card-preview">
+                    Step-by-step guide to building feature-rich Telegram bots using Aiogram 3.x. 
+                    Learn about handlers, middlewares, FSM, and inline keyboards.
+                </p>
+                <div class="blog-card-footer">
+                    <div class="blog-meta">
+                        <span class="blog-author">Muhammadali</span>
+                        <span class="blog-separator">•</span>
+                        <span class="blog-date">Jan 5, 2026</span>
+                    </div>
+                    <a href="/blogs/aiogram-bot-development/" class="blog-read-more">
+                        Read More →
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog Post 6 -->
+            <article class="blog-card">
+                <div class="blog-card-header">
+                    <span class="blog-category">DevOps</span>
+                    <span class="blog-reading-time">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M8 4V8L11 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        12 min read
+                    </span>
+                </div>
+                <h3 class="blog-card-title">
+                    <a href="/blogs/docker-django-deployment/">Dockerizing Django Applications for Production</a>
+                </h3>
+                <p class="blog-card-preview">
+                    Complete guide to containerizing your Django applications with Docker. 
+                    Learn multi-stage builds, docker-compose, and deployment best practices.
+                </p>
+                <div class="blog-card-footer">
+                    <div class="blog-meta">
+                        <span class="blog-author">Muhammadali</span>
+                        <span class="blog-separator">•</span>
+                        <span class="blog-date">Jan 3, 2026</span>
+                    </div>
+                    <a href="/blogs/docker-django-deployment/" class="blog-read-more">
+                        Read More →
+                    </a>
+                </div>
+            </article>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <button class="pagination-btn" disabled>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Previous
+            </button>
+            <div class="pagination-numbers">
+                <button class="pagination-number active">1</button>
+                <button class="pagination-number">2</button>
+                <button class="pagination-number">3</button>
+                <span class="pagination-dots">...</span>
+                <button class="pagination-number">8</button>
+            </div>
+            <button class="pagination-btn">
+                Next
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+{% endblock %}

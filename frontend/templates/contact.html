@@ -1,0 +1,249 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Me - Muhammadali{% endblock %}
+{% block meta_description %}Get in touch with me for collaboration, questions, or just to say hello. I'd love to hear from you!{% endblock %}
+
+{% block content %}
+<!-- Contact Header -->
+<section class="page-header">
+    <div class="container">
+        <div class="page-header-content">
+            <h1 class="page-title">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M26.667 5.333H5.333c-1.467 0-2.653 1.2-2.653 2.667l-.013 16c0 1.467 1.2 2.667 2.666 2.667h21.334c1.466 0 2.666-1.2 2.666-2.667V8c0-1.467-1.2-2.667-2.666-2.667zm0 5.334L16 17.333 5.333 10.667V8L16 14.667 26.667 8v2.667z" fill="currentColor"/>
+                </svg>
+                Get In Touch
+            </h1>
+            <p class="page-subtitle">
+                Have a question or want to work together? I'd love to hear from you!
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Content -->
+<section class="contact-section section">
+    <div class="container">
+        <div class="contact-layout">
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+                <h2 class="form-title">Send Me a Message</h2>
+                <p class="form-subtitle">Fill out the form below and I'll get back to you as soon as possible.</p>
+
+                <form class="contact-form" id="contactForm">
+                    <!-- CSRF Token (Django) -->
+                    <!-- {% csrf_token %} -->
+                    
+                    <div class="form-group">
+                        <label for="name" class="form-label">Your Name *</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            class="form-input" 
+                            placeholder="John Doe"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Your Email *</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="form-input" 
+                            placeholder="john@example.com"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject *</label>
+                        <input 
+                            type="text" 
+                            id="subject" 
+                            name="subject" 
+                            class="form-input" 
+                            placeholder="What's this about?"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message *</label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            class="form-textarea" 
+                            rows="6"
+                            placeholder="Write your message here..."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large btn-block">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M2.5 6.667L10 2.5l7.5 4.167v6.666c0 2.5-2.5 5-7.5 5s-7.5-2.5-7.5-5V6.667z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10 10.833L2.5 6.667M10 10.833l7.5-4.166M10 10.833V18.333" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Send Message
+                    </button>
+
+                    <!-- Success/Error Messages -->
+                    <div id="formMessage" class="form-message" style="display: none;"></div>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact-info-wrapper">
+                <div class="contact-info-card">
+                    <h3 class="contact-info-title">Other Ways to Reach Me</h3>
+                    <p class="contact-info-text">
+                        Prefer a different method? Feel free to reach out through any of these channels.
+                    </p>
+
+                    <div class="contact-methods">
+                        <a href="mailto:your.email@gmail.com" class="contact-method">
+                            <div class="contact-method-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="contact-method-label">Email</div>
+                                <div class="contact-method-value">your.email@gmail.com</div>
+                            </div>
+                        </a>
+
+                        <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" class="contact-method">
+                            <div class="contact-method-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161l-1.84 8.673c-.138.613-.5.76-1.01.474l-2.788-2.052-1.345 1.294c-.148.148-.273.273-.562.273l.2-2.84 5.181-4.681c.225-.2-.05-.312-.35-.112l-6.4 4.03-2.76-.863c-.6-.187-.612-.6.126-.889l10.8-4.16c.5-.187.938.112.774.889z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="contact-method-label">Telegram</div>
+                                <div class="contact-method-value">@yourusername</div>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="contact-method">
+                            <div class="contact-method-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="contact-method-label">GitHub</div>
+                                <div class="contact-method-value">@yourusername</div>
+                            </div>
+                        </a>
+
+                        <a href="https://youtube.com/@yourusername" target="_blank" rel="noopener noreferrer" class="contact-method">
+                            <div class="contact-method-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="contact-method-label">YouTube</div>
+                                <div class="contact-method-value">@yourusername</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-info-card">
+                    <h3 class="contact-info-title">Response Time</h3>
+                    <p class="contact-info-text">
+                        I typically respond to messages within 24-48 hours. For urgent matters, 
+                        Telegram is usually the fastest way to reach me.
+                    </p>
+                </div>
+
+                <div class="contact-info-card">
+                    <h3 class="contact-info-title">Location</h3>
+                    <p class="contact-info-text">
+                        📍 Samarkand, Uzbekistan<br>
+                        🕐 UTC+5 (UZT)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="contact-faq section">
+    <div class="container container-narrow">
+        <h2 class="section-title text-center">Frequently Asked Questions</h2>
+        
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary class="faq-question">
+                    <span>Do you offer freelance services?</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </summary>
+                <div class="faq-answer">
+                    <p>
+                        While I'm currently focused on my studies, I'm open to discussing interesting projects 
+                        that align with my skills and schedule. Feel free to reach out with your project details!
+                    </p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">
+                    <span>Can you help with my project/assignment?</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </summary>
+                <div class="faq-answer">
+                    <p>
+                        I'm happy to provide guidance and point you in the right direction, but I don't complete 
+                        assignments for others. Check out my blog posts and courses for learning resources!
+                    </p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">
+                    <span>Do you accept guest posts?</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </summary>
+                <div class="faq-answer">
+                    <p>
+                        Currently, I'm not accepting guest posts as I want to maintain a consistent voice and quality. 
+                        However, if you have an exceptional idea, feel free to pitch it!
+                    </p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">
+                    <span>How can I support your work?</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </summary>
+                <div class="faq-answer">
+                    <p>
+                        The best way to support me is by sharing my content with others who might find it helpful, 
+                        providing feedback, and engaging with the community. Your support means a lot!
+                    </p>
+                </div>
+            </details>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="/static/js/contact-form.js"></script>
+{% endblock %}

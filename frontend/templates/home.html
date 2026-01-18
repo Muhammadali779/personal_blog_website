@@ -1,0 +1,257 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Muhammadali{% endblock %}
+{% block meta_description %}Welcome to my personal blog and online courses platform. Explore technical articles and structured learning courses.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Muhammadali</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Software Engineering Student | Backend Developer | Technical Writer
+                </p>
+                <p class="hero-description">
+                    Building web applications with Django & FastAPI, sharing knowledge through 
+                    technical blogs and creating structured online courses for developers.
+                </p>
+                <div class="hero-cta">
+                    <a href="/blogs/" class="btn btn-primary">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M4 6H16M4 10H16M4 14H10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Read Blogs
+                    </a>
+                    <a href="/courses/" class="btn btn-secondary">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 2L2 6L10 10L18 6L10 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 14L10 18L18 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 10L10 14L18 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Explore Courses
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <div class="code-window">
+                        <div class="code-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="code-body">
+                            <pre><code class="language-python"><span class="keyword">class</span> <span class="class-name">Developer</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="param">self</span>):
+        <span class="param">self</span>.name = <span class="string">"Muhammadali"</span>
+        <span class="param">self</span>.skills = [
+            <span class="string">"Python"</span>,
+            <span class="string">"Django"</span>,
+            <span class="string">"FastAPI"</span>,
+            <span class="string">"PostgreSQL"</span>
+        ]
+    
+    <span class="keyword">def</span> <span class="function">code</span>(<span class="param">self</span>):
+        <span class="keyword">return</span> <span class="string">"Building awesome apps!"</span></code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Animated Background -->
+    <div class="hero-background">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+</section>
+
+<!-- About Preview Section -->
+<section class="about-preview section">
+    <div class="container">
+        <div class="about-preview-content">
+            <div class="about-preview-image">
+                <div class="image-placeholder">
+                    <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+                        <circle cx="60" cy="60" r="58" stroke="currentColor" stroke-width="4"/>
+                        <circle cx="60" cy="45" r="18" fill="currentColor"/>
+                        <path d="M30 95C30 78 43 65 60 65C77 65 90 78 90 95" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="about-preview-text">
+                <h2 class="section-title">About Me</h2>
+                <p class="about-preview-bio">
+                    I'm a Software Engineering student at Samarkand branch of Tashkent University 
+                    of Information Technologies named after Muhammad al-Khwarizmi. I'm passionate 
+                    about backend development, creating web applications with Django and FastAPI, 
+                    and building Telegram bots with Aiogram.
+                </p>
+                <p class="about-preview-bio">
+                    Through this platform, I share my learning journey, technical insights, and 
+                    create structured courses to help other developers grow their skills.
+                </p>
+                <a href="/about/" class="btn btn-outline">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="8" r="3" stroke="currentColor" stroke-width="2"/>
+                        <path d="M4 18C4 14 6.5 11 10 11C13.5 11 16 14 16 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Read More About Me
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Latest Blog Posts Section -->
+<section class="latest-blogs section">
+    <div class="container">
+        <div class="section-header">
+            <div>
+                <h2 class="section-title">Latest Blog Posts</h2>
+                <p class="section-subtitle">Recent technical articles and tutorials</p>
+            </div>
+            <a href="/blogs/" class="btn btn-text">
+                View All Posts
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+
+        <div class="blog-grid">
+            <!-- Blog Card 1 (Example - will be populated dynamically) -->
+            <article class="blog-card">
+                <div class="blog-card-header">
+                    <span class="blog-category">Django</span>
+                    <span class="blog-reading-time">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M8 4V8L11 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        5 min read
+                    </span>
+                </div>
+                <h3 class="blog-card-title">
+                    <a href="/blogs/building-rest-api-django/">Building a REST API with Django Rest Framework</a>
+                </h3>
+                <p class="blog-card-preview">
+                    Learn how to build a production-ready REST API using Django Rest Framework 
+                    with authentication, permissions, and best practices.
+                </p>
+                <div class="blog-card-footer">
+                    <div class="blog-meta">
+                        <span class="blog-date">Jan 15, 2026</span>
+                    </div>
+                    <a href="/blogs/building-rest-api-django/" class="blog-read-more">
+                        Read More →
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog Card 2 -->
+            <article class="blog-card">
+                <div class="blog-card-header">
+                    <span class="blog-category">Python</span>
+                    <span class="blog-reading-time">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M8 4V8L11 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        8 min read
+                    </span>
+                </div>
+                <h3 class="blog-card-title">
+                    <a href="/blogs/async-programming-python/">Mastering Async Programming in Python</a>
+                </h3>
+                <p class="blog-card-preview">
+                    Deep dive into asynchronous programming with asyncio, understanding 
+                    coroutines, tasks, and building efficient async applications.
+                </p>
+                <div class="blog-card-footer">
+                    <div class="blog-meta">
+                        <span class="blog-date">Jan 12, 2026</span>
+                    </div>
+                    <a href="/blogs/async-programming-python/" class="blog-read-more">
+                        Read More →
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog Card 3 -->
+            <article class="blog-card">
+                <div class="blog-card-header">
+                    <span class="blog-category">PostgreSQL</span>
+                    <span class="blog-reading-time">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M8 4V8L11 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        6 min read
+                    </span>
+                </div>
+                <h3 class="blog-card-title">
+                    <a href="/blogs/postgresql-optimization/">PostgreSQL Query Optimization Techniques</a>
+                </h3>
+                <p class="blog-card-preview">
+                    Learn essential techniques to optimize your PostgreSQL queries, understand 
+                    indexes, and improve database performance.
+                </p>
+                <div class="blog-card-footer">
+                    <div class="blog-meta">
+                        <span class="blog-date">Jan 10, 2026</span>
+                    </div>
+                    <a href="/blogs/postgresql-optimization/" class="blog-read-more">
+                        Read More →
+                    </a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section section">
+    <div class="container">
+        <div class="cta-card">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Start Learning?</h2>
+                <p class="cta-text">
+                    Explore my structured online courses with video lessons, practical examples, 
+                    and hands-on projects to accelerate your development journey.
+                </p>
+                <a href="/courses/" class="btn btn-primary btn-large">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 2L2 6L10 10L18 6L10 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 14L10 18L18 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 10L10 14L18 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Browse Courses
+                </a>
+            </div>
+            <div class="cta-visual">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">Blog Posts</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">Courses</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Lessons</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

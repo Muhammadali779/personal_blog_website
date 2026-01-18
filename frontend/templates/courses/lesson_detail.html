@@ -1,0 +1,283 @@
+{% extends "base.html" %}
+
+{% block title %}Lesson 1: Introduction to Django - Django Masterclass{% endblock %}
+{% block meta_description %}Get started with Django. Learn about MVT architecture, project structure, and setting up your development environment.{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+{% endblock %}
+
+{% block content %}
+<!-- Lesson Header -->
+<div class="lesson-detail">
+    <div class="lesson-header">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="/">Home</a>
+                <span>/</span>
+                <a href="/courses/">Courses</a>
+                <span>/</span>
+                <a href="/courses/django-masterclass/">Django Masterclass</a>
+                <span>/</span>
+                <span>Lesson 1</span>
+            </div>
+
+            <div class="lesson-header-info">
+                <span class="lesson-badge">Lesson 1 of 12</span>
+                <h1 class="lesson-title">Introduction to Django Framework</h1>
+                <div class="lesson-meta">
+                    <span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M8 4V8L11 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        15 min
+                    </span>
+                    <span>•</span>
+                    <span>Beginner Level</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Player Section -->
+    <section class="lesson-video-section">
+        <div class="container">
+            <div class="video-player-wrapper">
+                <!-- YouTube Embed or Custom Video Player -->
+                <div class="video-player">
+                    <iframe
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                        title="Introduction to Django Framework"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lesson Content -->
+    <section class="lesson-content-section">
+        <div class="container">
+            <div class="lesson-layout">
+                <!-- Main Content -->
+                <div class="lesson-main">
+                    <article class="lesson-article">
+                        <h2>What is Django?</h2>
+                        <p>
+                            Django is a high-level Python web framework that encourages rapid development 
+                            and clean, pragmatic design. Built by experienced developers, it takes care of 
+                            much of the hassle of web development, so you can focus on writing your app 
+                            without needing to reinvent the wheel.
+                        </p>
+
+                        <h3>Key Features of Django</h3>
+                        <ul class="feature-list">
+                            <li>
+                                <strong>Fast Development:</strong> Django was designed to help developers 
+                                take applications from concept to completion as quickly as possible.
+                            </li>
+                            <li>
+                                <strong>Secure:</strong> Django takes security seriously and helps developers 
+                                avoid many common security mistakes.
+                            </li>
+                            <li>
+                                <strong>Scalable:</strong> Some of the busiest sites on the web leverage 
+                                Django's ability to quickly scale.
+                            </li>
+                            <li>
+                                <strong>Versatile:</strong> Django can be used to build almost any type of 
+                                website — from content management systems to social networks.
+                            </li>
+                        </ul>
+
+                        <h2>Django MVT Architecture</h2>
+                        <p>
+                            Django follows the MVT (Model-View-Template) pattern, which is similar to MVC 
+                            but with some key differences:
+                        </p>
+
+                        <div class="info-card">
+                            <div class="info-card-item">
+                                <h4>Model</h4>
+                                <p>Defines the structure of your database and handles data logic</p>
+                            </div>
+                            <div class="info-card-item">
+                                <h4>View</h4>
+                                <p>Contains the business logic and interacts with models</p>
+                            </div>
+                            <div class="info-card-item">
+                                <h4>Template</h4>
+                                <p>Handles the presentation layer (HTML)</p>
+                            </div>
+                        </div>
+
+                        <h2>Setting Up Django</h2>
+                        <p>Let's get Django installed and create your first project:</p>
+
+                        <h3>Step 1: Install Django</h3>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-language">bash</span>
+                                <button class="btn-copy" data-clipboard-target="code-1">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <rect x="5" y="5" width="9" height="9" stroke="currentColor" stroke-width="1.5" rx="1"/>
+                                        <path d="M3 11V3C3 2.44772 3.44772 2 4 2H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                    </svg>
+                                    <span>Copy</span>
+                                </button>
+                            </div>
+                            <pre><code id="code-1" class="language-bash"># Create a virtual environment
+python -m venv venv
+
+# Activate virtual environment
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+
+# Install Django
+pip install django</code></pre>
+                        </div>
+
+                        <h3>Step 2: Create a Django Project</h3>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-language">bash</span>
+                                <button class="btn-copy" data-clipboard-target="code-2">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <rect x="5" y="5" width="9" height="9" stroke="currentColor" stroke-width="1.5" rx="1"/>
+                                        <path d="M3 11V3C3 2.44772 3.44772 2 4 2H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                    </svg>
+                                    <span>Copy</span>
+                                </button>
+                            </div>
+                            <pre><code id="code-2" class="language-bash"># Create a new Django project
+django-admin startproject myproject
+
+# Navigate to project directory
+cd myproject
+
+# Run development server
+python manage.py runserver</code></pre>
+                        </div>
+
+                        <h3>Step 3: Understanding Project Structure</h3>
+                        <p>After creating a project, you'll see this structure:</p>
+
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-language">text</span>
+                                <button class="btn-copy" data-clipboard-target="code-3">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <rect x="5" y="5" width="9" height="9" stroke="currentColor" stroke-width="1.5" rx="1"/>
+                                        <path d="M3 11V3C3 2.44772 3.44772 2 4 2H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                    </svg>
+                                    <span>Copy</span>
+                                </button>
+                            </div>
+                            <pre><code id="code-3" class="language-text">myproject/
+├── manage.py           # Command-line utility
+└── myproject/
+    ├── __init__.py    # Python package marker
+    ├── settings.py    # Project settings
+    ├── urls.py        # URL declarations
+    ├── asgi.py        # ASGI configuration
+    └── wsgi.py        # WSGI configuration</code></pre>
+                        </div>
+
+                        <h2>Creating Your First App</h2>
+                        <p>Django projects are organized into apps. Let's create one:</p>
+
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-language">bash</span>
+                                <button class="btn-copy" data-clipboard-target="code-4">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <rect x="5" y="5" width="9" height="9" stroke="currentColor" stroke-width="1.5" rx="1"/>
+                                        <path d="M3 11V3C3 2.44772 3.44772 2 4 2H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                    </svg>
+                                    <span>Copy</span>
+                                </button>
+                            </div>
+                            <pre><code id="code-4" class="language-bash">python manage.py startapp blog</code></pre>
+                        </div>
+
+                        <div class="callout callout-success">
+                            <div class="callout-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M7 10L9 12L13 8M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="callout-content">
+                                <strong>Congratulations!</strong> You've just created your first Django project and app. 
+                                In the next lesson, we'll dive into models and database design.
+                            </div>
+                        </div>
+
+                        <h2>Summary</h2>
+                        <p>In this lesson, you learned:</p>
+                        <ul>
+                            <li>What Django is and its key features</li>
+                            <li>The MVT architecture pattern</li>
+                            <li>How to install Django and create a project</li>
+                            <li>Understanding Django project structure</li>
+                            <li>Creating your first Django app</li>
+                        </ul>
+                    </article>
+
+                    <!-- Lesson Navigation -->
+                    <div class="lesson-navigation">
+                        <a href="/courses/django-masterclass/" class="lesson-nav-back">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M12 16L6 10L12 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Back to Course
+                        </a>
+                        <a href="/courses/django-masterclass/lesson-2-models/" class="lesson-nav-next">
+                            Next Lesson
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M8 4L14 10L8 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="lesson-sidebar">
+                    <div class="sidebar-sticky">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">Course Progress</h3>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 8.33%"></div>
+                            </div>
+                            <p class="progress-text">1 of 12 lessons completed</p>
+                        </div>
+
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">Up Next</h3>
+                            <a href="/courses/django-masterclass/lesson-2-models/" class="next-lesson-card">
+                                <div class="next-lesson-number">Lesson 2</div>
+                                <div>
+                                    <div class="next-lesson-title">Django Models and Database Design</div>
+                                    <div class="next-lesson-duration">18 min</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="/static/js/code-copy.js"></script>
+<script>
+    hljs.highlightAll();
+</script>
+{% endblock %}

@@ -1,0 +1,279 @@
+{% extends "base.html" %}
+
+{% block title %}Django Masterclass - Muhammadali{% endblock %}
+{% block meta_description %}Learn Django from the ground up. Build real-world web applications with user authentication, database operations, and deployment.{% endblock %}
+
+{% block content %}
+<!-- Course Header -->
+<section class="course-header">
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/">Home</a>
+            <span>/</span>
+            <a href="/courses/">Courses</a>
+            <span>/</span>
+            <span>Django Masterclass</span>
+        </div>
+
+        <div class="course-header-content">
+            <div class="course-header-text">
+                <div class="course-badge-large">Beginner</div>
+                <h1 class="course-header-title">Django Masterclass: Build Web Apps from Scratch</h1>
+                <p class="course-header-description">
+                    Master Django framework by building real-world web applications. Learn everything from 
+                    basics to advanced topics including user authentication, database operations, REST APIs, 
+                    and deployment to production.
+                </p>
+                
+                <div class="course-header-meta">
+                    <div class="course-stat-item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M3 5L10 3L17 5V10C17 13.5 13.5 17 10 17C6.5 17 3 13.5 3 10V5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div>
+                            <div class="stat-value">12</div>
+                            <div class="stat-label">Lessons</div>
+                        </div>
+                    </div>
+                    <div class="course-stat-item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="2"/>
+                            <path d="M10 5V10L13 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <div>
+                            <div class="stat-value">3 hours</div>
+                            <div class="stat-label">Duration</div>
+                        </div>
+                    </div>
+                    <div class="course-stat-item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 3L3 6L10 9L17 6L10 3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 13L10 16L17 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div>
+                            <div class="stat-value">Beginner</div>
+                            <div class="stat-label">Level</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-header-thumbnail">
+                <img src="/static/images/courses/django-course.jpg" alt="Django Masterclass">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What You'll Learn -->
+<section class="course-learn section">
+    <div class="container">
+        <h2 class="section-title">What You'll Learn</h2>
+        <div class="learn-grid">
+            <div class="learn-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p>Build complete web applications with Django framework</p>
+            </div>
+            <div class="learn-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p>Implement user authentication and authorization</p>
+            </div>
+            <div class="learn-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p>Work with databases using Django ORM</p>
+            </div>
+            <div class="learn-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p>Create RESTful APIs with Django REST Framework</p>
+            </div>
+            <div class="learn-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p>Deploy Django applications to production</p>
+            </div>
+            <div class="learn-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p>Follow Django best practices and design patterns</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Course Curriculum -->
+<section class="course-curriculum section">
+    <div class="container container-narrow">
+        <h2 class="section-title">Course Curriculum</h2>
+        <p class="section-subtitle">12 lessons • 3 hours total duration</p>
+
+        <div class="lessons-list">
+            <!-- Lesson 1 -->
+            <div class="lesson-item">
+                <div class="lesson-number">1</div>
+                <div class="lesson-content">
+                    <h3 class="lesson-title">
+                        <a href="/courses/django-masterclass/lesson-1-introduction/">Introduction to Django Framework</a>
+                    </h3>
+                    <p class="lesson-description">
+                        Get started with Django. Learn about MVT architecture, project structure, 
+                        and setting up your development environment.
+                    </p>
+                    <div class="lesson-meta">
+                        <span class="lesson-duration">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M7 3V7L9.5 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            15 min
+                        </span>
+                    </div>
+                </div>
+                <a href="/courses/django-masterclass/lesson-1-introduction/" class="lesson-play-btn" aria-label="Play lesson">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M6 4L14 10L6 16V4Z" fill="currentColor"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Lesson 2 -->
+            <div class="lesson-item">
+                <div class="lesson-number">2</div>
+                <div class="lesson-content">
+                    <h3 class="lesson-title">
+                        <a href="/courses/django-masterclass/lesson-2-models/">Django Models and Database Design</a>
+                    </h3>
+                    <p class="lesson-description">
+                        Learn how to create models, work with Django ORM, and design efficient database schemas.
+                    </p>
+                    <div class="lesson-meta">
+                        <span class="lesson-duration">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M7 3V7L9.5 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            18 min
+                        </span>
+                    </div>
+                </div>
+                <a href="/courses/django-masterclass/lesson-2-models/" class="lesson-play-btn" aria-label="Play lesson">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M6 4L14 10L6 16V4Z" fill="currentColor"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Lesson 3 -->
+            <div class="lesson-item">
+                <div class="lesson-number">3</div>
+                <div class="lesson-content">
+                    <h3 class="lesson-title">
+                        <a href="/courses/django-masterclass/lesson-3-views/">Views and URL Routing</a>
+                    </h3>
+                    <p class="lesson-description">
+                        Master Django views, URL patterns, and handling HTTP requests and responses.
+                    </p>
+                    <div class="lesson-meta">
+                        <span class="lesson-duration">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M7 3V7L9.5 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            16 min
+                        </span>
+                    </div>
+                </div>
+                <a href="/courses/django-masterclass/lesson-3-views/" class="lesson-play-btn" aria-label="Play lesson">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M6 4L14 10L6 16V4Z" fill="currentColor"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Lesson 4 -->
+            <div class="lesson-item">
+                <div class="lesson-number">4</div>
+                <div class="lesson-content">
+                    <h3 class="lesson-title">
+                        <a href="/courses/django-masterclass/lesson-4-templates/">Templates and Template Language</a>
+                    </h3>
+                    <p class="lesson-description">
+                        Create dynamic templates using Django Template Language, template inheritance, and filters.
+                    </p>
+                    <div class="lesson-meta">
+                        <span class="lesson-duration">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M7 3V7L9.5 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            14 min
+                        </span>
+                    </div>
+                </div>
+                <a href="/courses/django-masterclass/lesson-4-templates/" class="lesson-play-btn" aria-label="Play lesson">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M6 4L14 10L6 16V4Z" fill="currentColor"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- More lessons (5-12) with similar structure -->
+            <div class="lesson-item">
+                <div class="lesson-number">5</div>
+                <div class="lesson-content">
+                    <h3 class="lesson-title">
+                        <a href="/courses/django-masterclass/lesson-5-forms/">Forms and Form Validation</a>
+                    </h3>
+                    <p class="lesson-description">
+                        Handle user input with Django forms, validation, and form processing.
+                    </p>
+                    <div class="lesson-meta">
+                        <span class="lesson-duration">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M7 3V7L9.5 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            12 min
+                        </span>
+                    </div>
+                </div>
+                <a href="/courses/django-masterclass/lesson-5-forms/" class="lesson-play-btn" aria-label="Play lesson">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M6 4L14 10L6 16V4Z" fill="currentColor"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Continue with remaining lessons -->
+            <div class="lessons-more">
+                <p>+ 7 more lessons covering authentication, REST APIs, deployment, and more...</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Start Learning CTA -->
+<section class="course-cta section">
+    <div class="container">
+        <div class="cta-card">
+            <h2>Ready to Start Learning?</h2>
+            <p>Begin with the first lesson and master Django step by step</p>
+            <a href="/courses/django-masterclass/lesson-1-introduction/" class="btn btn-primary btn-large">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M6 4L14 10L6 16V4Z" fill="currentColor"/>
+                </svg>
+                Start Course
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

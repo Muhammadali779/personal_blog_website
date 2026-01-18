@@ -1,0 +1,13 @@
+/* THEMES.CSS - Additional theme styles */
+
+body.dark-mode .code-window {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .about-preview-image .image-placeholder {
+    background: var(--bg-tertiary);
+}
+
+body.dark-mode .cta-card {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+}

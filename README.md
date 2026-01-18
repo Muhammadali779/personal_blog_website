@@ -11,7 +11,7 @@
 ## 👨‍💻 About the Developer
 
 **Name:** Muhammadali  
-**University:** Samarkand branch of Tashkent University of Information Technologies named after Muhammad al-Khwarizmi 
+**University:** Samarkand branch of Tashkent University of Information Technologies named after Muhammad al-Khwarizmi  
 **Major:** Software Engineering
 
 ### 💪 Technical Skills

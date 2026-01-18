@@ -1,0 +1,281 @@
+{% extends "base.html" %}
+
+{% block title %}Online Courses - Muhammadali{% endblock %}
+{% block meta_description %}Structured online courses with video lessons, practical examples, and hands-on projects for developers.{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <div class="page-header-content">
+            <h1 class="page-title">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M16 4L4 10L16 16L28 10L16 4Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4 22L16 28L28 22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4 16L16 22L28 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Online Courses
+            </h1>
+            <p class="page-subtitle">
+                Structured learning paths with video lessons, practical examples, and real-world projects
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Courses List -->
+<section class="courses-section section">
+    <div class="container">
+        <!-- Course Grid -->
+        <div class="courses-grid">
+            <!-- Course Card 1 -->
+            <article class="course-card">
+                <div class="course-thumbnail">
+                    <img src="/static/images/courses/django-course.jpg" alt="Django Masterclass" loading="lazy">
+                    <div class="course-badge">Beginner</div>
+                </div>
+                <div class="course-content">
+                    <h3 class="course-title">
+                        <a href="/courses/django-masterclass/">Django Masterclass: Build Web Apps from Scratch</a>
+                    </h3>
+                    <p class="course-description">
+                        Learn Django from the ground up. Build real-world web applications with user authentication, 
+                        database operations, and deployment.
+                    </p>
+                    <div class="course-meta">
+                        <span class="course-stat">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M2 4L8 2L14 4V8C14 11 11 14 8 14C5 14 2 11 2 8V4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            12 lessons
+                        </span>
+                        <span class="course-stat">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M8 4V8L11 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            3 hours
+                        </span>
+                    </div>
+                    <a href="/courses/django-masterclass/" class="btn btn-primary btn-block">
+                        View Course
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Course Card 2 -->
+            <article class="course-card">
+                <div class="course-thumbnail">
+                    <img src="/static/images/courses/fastapi-course.jpg" alt="FastAPI Course" loading="lazy">
+                    <div class="course-badge">Intermediate</div>
+                </div>
+                <div class="course-content">
+                    <h3 class="course-title">
+                        <a href="/courses/fastapi-modern-apis/">FastAPI: Build Modern Async APIs</a>
+                    </h3>
+                    <p class="course-description">
+                        Master FastAPI to build high-performance asynchronous APIs. Learn async/await, 
+                        Pydantic models, and API documentation.
+                    </p>
+                    <div class="course-meta">
+                        <span class="course-stat">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M2 4L8 2L14 4V8C14 11 11 14 8 14C5 14 2 11 2 8V4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            10 lessons
+                        </span>
+                        <span class="course-stat">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M8 4V8L11 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            2.5 hours
+                        </span>
+                    </div>
+                    <a href="/courses/fastapi-modern-apis/" class="btn btn-primary btn-block">
+                        View Course
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Course Card 3 -->
+            <article class="course-card">
+                <div class="course-thumbnail">
+                    <img src="/static/images/courses/postgresql-course.jpg" alt="PostgreSQL Course" loading="lazy">
+                    <div class="course-badge">Intermediate</div>
+                </div>
+                <div class="course-content">
+                    <h3 class="course-title">
+                        <a href="/courses/postgresql-essentials/">PostgreSQL Essentials for Developers</a>
+                    </h3>
+                    <p class="course-description">
+                        Deep dive into PostgreSQL. Learn queries, indexing, optimization, transactions, 
+                        and advanced database concepts.
+                    </p>
+                    <div class="course-meta">
+                        <span class="course-stat">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M2 4L8 2L14 4V8C14 11 11 14 8 14C5 14 2 11 2 8V4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            15 lessons
+                        </span>
+                        <span class="course-stat">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M8 4V8L11 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            4 hours
+                        </span>
+                    </div>
+                    <a href="/courses/postgresql-essentials/" class="btn btn-primary btn-block">
+                        View Course
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Course Card 4 -->
+            <article class="course-card">
+                <div class="course-thumbnail">
+                    <img src="/static/images/courses/telegram-bots.jpg" alt="Telegram Bots" loading="lazy">
+                    <div class="course-badge">Beginner</div>
+                </div>
+                <div class="course-content">
+                    <h3 class="course-title">
+                        <a href="/courses/telegram-bot-aiogram/">Building Telegram Bots with Aiogram</a>
+                    </h3>
+                    <p class="course-description">
+                        Create powerful Telegram bots using Aiogram 3.x. Learn handlers, FSM, 
+                        inline keyboards, and bot deployment.
+                    </p>
+                    <div class="course-meta">
+                        <span class="course-stat">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M2 4L8 2L14 4V8C14 11 11 14 8 14C5 14 2 11 2 8V4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            8 lessons
+                        </span>
+                        <span class="course-stat">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M8 4V8L11 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            2 hours
+                        </span>
+                    </div>
+                    <a href="/courses/telegram-bot-aiogram/" class="btn btn-primary btn-block">
+                        View Course
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Course Card 5 -->
+            <article class="course-card">
+                <div class="course-thumbnail">
+                    <img src="/static/images/courses/python-advanced.jpg" alt="Advanced Python" loading="lazy">
+                    <div class="course-badge">Advanced</div>
+                </div>
+                <div class="course-content">
+                    <h3 class="course-title">
+                        <a href="/courses/advanced-python/">Advanced Python Programming</a>
+                    </h3>
+                    <p class="course-description">
+                        Master advanced Python concepts: decorators, generators, context managers, 
+                        metaclasses, and async programming.
+                    </p>
+                    <div class="course-meta">
+                        <span class="course-stat">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M2 4L8 2L14 4V8C14 11 11 14 8 14C5 14 2 11 2 8V4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            18 lessons
+                        </span>
+                        <span class="course-stat">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M8 4V8L11 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            5 hours
+                        </span>
+                    </div>
+                    <a href="/courses/advanced-python/" class="btn btn-primary btn-block">
+                        View Course
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Course Card 6 -->
+            <article class="course-card">
+                <div class="course-thumbnail">
+                    <img src="/static/images/courses/docker-devops.jpg" alt="Docker & DevOps" loading="lazy">
+                    <div class="course-badge">Intermediate</div>
+                </div>
+                <div class="course-content">
+                    <h3 class="course-title">
+                        <a href="/courses/docker-devops/">Docker & DevOps for Python Developers</a>
+                    </h3>
+                    <p class="course-description">
+                        Learn Docker containerization, CI/CD pipelines, and deploying Python 
+                        applications to production environments.
+                    </p>
+                    <div class="course-meta">
+                        <span class="course-stat">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M2 4L8 2L14 4V8C14 11 11 14 8 14C5 14 2 11 2 8V4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            14 lessons
+                        </span>
+                        <span class="course-stat">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M8 4V8L11 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            3.5 hours
+                        </span>
+                    </div>
+                    <a href="/courses/docker-devops/" class="btn btn-primary btn-block">
+                        View Course
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <button class="pagination-btn" disabled>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Previous
+            </button>
+            <div class="pagination-numbers">
+                <button class="pagination-number active">1</button>
+                <button class="pagination-number">2</button>
+            </div>
+            <button class="pagination-btn">
+                Next
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+{% endblock %}
